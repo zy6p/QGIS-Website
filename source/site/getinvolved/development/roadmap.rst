@@ -5,7 +5,7 @@
 Road Map
 =========
 
-Releases and development of QGIS follow a timebased schedule.
+Releases and development of QGIS follow a timebased schedule (roadmap).
 
 - Even version numbers (2.18, 3.2 etc) are release versions.
 
@@ -106,8 +106,6 @@ This schedule is also available as `"iCalendar" </schedule.ics>`_.
    "LTR","Long term release, begin of new development phase"
    "LR","Regular release, begin of new development phase"
    "FF","Feature freeze, end of development phase"
-   "HF","hard freeze"
-   "SF","Soft freeze with bi-monthly vote"
    "PR","Point release of latest release and LTR branch"
    "EPR","Extra Point release"
    ":rm-current:`current`",":rm-current:`currently supported releases:` |ltrrelease| and |release|"

@@ -3,6 +3,8 @@
 
 from urllib.request import urlopen
 import csv
+import os
+import re
 import codecs
 from datetime import datetime, timedelta, timezone
 from icalendar import Calendar, Event
@@ -207,7 +209,21 @@ for row in reader:
     elif r == "NEXT":
         nextversion = name
 
+for v, n in {ltr_version: ltr_name, lr_version: lr_name}.items():
+    print(f"{v}:{n}")
+    url = "https://raw.githubusercontent.com/qgis/QGIS/release-{0}/CMakeLists.txt".format("_".join(v.split('.')[:2]))
+    cm = urlopen(url).read().decode('utf-8')
+    rn = re.search("^set\(RELEASE_NAME \"(.*)\"\)$", cm, re.MULTILINE).group(1)
+    assert n==rn, f"Expected {n}, found {rn}"
+
+assert lr_version.split(".") > ltr_version.split("."), f"LR {lr_version} not higher than {ltr_version}"
+assert devversion.split(".") > lr_version.split("."), f"DEV {devversion} not higher than {lr_version}"
+
 o = open("source/schedule.py", "w")
+
+shortver = "".join(lr_version.split(".")[:2])
+for f in [f"themes/qgis-theme/static/images/qgisorg_banner{shortver}.png", f"source/site/forusers/visualchangelog{shortver}/index.rst"]:
+    assert os.path.exists(f), f"{f} not found"
 
 o.write("""\
 from datetime import date
@@ -219,6 +235,7 @@ codename = u'%(lr_name)s'
 binary = '%(lr_binary)s'
 releasedate = date(%(releasedate)s)
 releasenote = u'%(lr_note)s'
+shortver = u'%(shortver)s'
 
 # long term release repository
 ltrversion = '%(ltrversion)s'
@@ -239,13 +256,14 @@ infeaturefreeze = %(infeaturefreeze)s
     "release": lr_version,
     "releasedate": "{0}, {1}, {2}".format(lr_date.year, lr_date.month, lr_date.day),
     "lr_binary": lr_binary,
-    "lr_name": lr_name,
-    "lr_note": lr_note if lr_note != '' else '\\u200B',
+    "lr_name": lr_name.replace("'", "\\'"),
+    "lr_note": lr_note.replace("'", "\\'") if lr_note != '' else ('RC' if lr_version.split('.')[2] == '0' else '\\u200B'),
     "ltrversion": ".".join(ltr_version.split(".")[:2]),
     "ltrrelease": ltr_version,
-    "ltr_name": ltr_name,
+    "ltr_name": ltr_name.replace("'", "\\'"),
     "ltr_binary": ltr_binary,
-    "ltr_note": ltr_note if ltr_note != '' else 'LTR',
+    "ltr_note": ltr_note.replace("'", "\\'") if ltr_note != '' else 'LTR',
+    "shortver": shortver,
     "devversion": devversion,
     "nextversion": nextversion,
     "nextfreezedate": f_date.strftime('%Y-%m-%d %H:%M:%S UTC') if f_date is not None else None,

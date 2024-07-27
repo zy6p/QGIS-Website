@@ -12,16 +12,16 @@ Current list of QGIS user groups
 
 * `QGIS Brasil (Brazil) - contact: Arthur Nanni <https://qgisbrasil.org/>`_
 * `QGIS Brugergruppe Danmark (Denmark) - contact: Jacob Arpe <https://qgis.dk/>`_
-* `QGIS UK (England) - contact: Simon Miles <https://qgis.uk/>`_
+* `QGIS UK (England) - contact: Simon Miles <https://uk.osgeo.org/qgis.html>`_
 * `QGIS Anwendergruppe Deutschland (Germany) - contact: Thomas Schüttenberg <https://qgis.de/>`_
 * `Gruppo degli utenti italiani di QGIS (Italy) - contact: Matteo Ghetta <http://qgis.it/>`_
 * `QGIS User Group Japan (OSGeo.JP) - contact: Kosuke ASAHI <http://qgis.jp/>`_
 * `QGIS Perú Official Users Group - contact: Anibal Alarcon <https://qgis.pe/>`_
 * `Polska Grupa Użytkowników QGIS (Poland) - contact: Milena Nowotarska <https://qgis.pl/>`_
 * `QGIS Portugal - contact: João Gaspar <https://qgis.pt/>`_
-* `QGIS UK (Scotland) - contact: Ross McDonald <https://qgis.uk/>`_
+* `QGIS UK (Scotland) - contact: Ross McDonald <https://uk.osgeo.org/qgis.html>`_
 * `QGIS user group Switzerland - contact: Isabel Kiefer <https://qgis.ch/>`_
-* `QGIS UK (Wales/Cymru) - contact: Kevin Williams <http://qgis.uk/>`_
+* `QGIS UK (Wales/Cymru) - contact: Kevin Williams <https://uk.osgeo.org/qgis.html>`_
 * `NIWA QGIS user group (New Zealand) - contact: Brent Wood --> REMOVED in 2018 <https://teamwork.niwa.co.nz/display/NQUG/NIWA+QGIS+Users+Group>`_
 
 
@@ -29,10 +29,10 @@ Current list of QGIS user groups
 
 * `QGIS Norge (Norway) - contact: Antonio Armas Diaz <https://qgis.no/>`_
 * `QGIS ZA (South Africa) - contact: Admire Nyakudya <https://qgis.org.za/>`_ (certificate expired 2019-01-24)
-* `Groupe des Utilisateurs de QGIS - France (France) - contact: Harrissou Sant-anna <https://www.osgeo.asso.fr/>`_
+* `Groupe des Utilisateurs de QGIS - France (France) - contact: Harrissou Sant-anna <https://www.osgeo.fr/>`_
 * `QGIS Sverige (Sweden) - contact: Karl-Magnus Jönsson <https://qgis.se/>`_
 * `QGIS Kenya - contact: Benard Mitto <https://qgis.or.ke>`_
-* `QGIS Australia - contact: Andrew Jeffrey <https://www.qgis-au.org>`_
+* `QGIS Australia - contact: Emma Hain <https://qgis-australia.org/>`_
 * `QGIS USA - contact: Kurt Menke <http://qgis.us>`_
 * `QGIS Mexico - contact: Hennessy Amor Becerra Ayala <https://qgis.mx>`_
 * `QGIS Georgia - contact: Zurab Archvadze --> REMOVED in 2018 <https://qgis.org>`_
@@ -51,7 +51,7 @@ Current list of QGIS user groups
 **Registered 2020**
 
 * `QGIS gebruikersgroep (Netherlands) - contact: Raymond Nijssen <https://qgis.nl/>`_
-* `Asociación QGIS México - contact: Hennessy Amor Becerra Ayala <https://qgis.mx/>`_
+* `Asociación QGIS México - contact: Hennessy Amor Becerra Ayala <https://qgis.org.mx/>`_
 * `Komunitas Pengguna QGIS Indonesia - contact: Ismail Sunni <https://qgis-id.github.io/>`_
 * `QGIS Slovensko (Slovakia) - contact: Jana Michalkova <https://qgis.sk/>`_
 * `Grupo de usuarios QGIS Ecuador - contact: Adrián Benavides <https://qgis.ec/>`_
@@ -60,6 +60,10 @@ Current list of QGIS user groups
 
 * `QGIS Anwendergruppe Österreich (Austria) - contact: Paul Stampfl <https://qgis.at/>`_
 * `QGIS Ghana - contact: Enock Seth Nyamador <https://qgisghana.org/>`_
+
+**Registered 2022**
+
+* `QGIS Argentina - contact: Ariel Anthieni <https://qgis.ar/>`_
 
 Goals of a user group
 ---------------------
@@ -88,15 +92,13 @@ Depending on your country, a smaller legal entity, e.g. an association, could be
 
 Statutes of the Swiss QGIS user group as an example:
 
-* german (master): https://www.qgis.ch/de/verein/statuten-der-qgis-anwendergruppe-schweiz
-* english (translation): https://www.qgis.ch/en/association/statutes-of-the-swiss-qgis-user-group
-* french (translation): https://www.qgis.ch/fr/association/statuts-du-groupe-d2019utilisateurs-qgis-suisse
+* german (master): https://www.qgis.ch/assets/pdf/StatutenderQGISAnwendergruppeSchweiz.pdf
+* french (translation): https://www.qgis.ch/assets/pdf/StatutsdugroupedutilisateursQGISSuisse.pdf
 
 Membership application forms:
 
-* german: https://www.qgis.ch/de/verein/beitrittserklaerung
-* english: https://www.qgis.ch/en/association/qgis-usergroup-switzerland-membership-application-form
-* french: https://www.qgis.ch/fr/association/declaration-d2019adhesion
+* german: https://www.qgis.ch/assets/pdf/QGIS%20Usergruppe%20Beitrittserklaerung.pdf
+* french: https://www.qgis.ch/assets/pdf/QGIS%20groupe%20d%20utilisateurs%20Suisse%20declaration%20d%20adhesion.pdf
 
 You can use these statutes and membership application forms as an idea
 or reference and change them to your local situation.

@@ -35,59 +35,39 @@
                     </a>
                   </div>
                   <div id="windows" class="accordion-body collapse in">
-                    <div class="accordion-inner">
-                      <div>
-                        <h5>{{ _('QGIS in OSGeo4W (recommended for regular users):') }}</h5>
-                        <a href="https://download.osgeo.org/osgeo4w/v2/osgeo4w-setup.exe" class="reference external">
-                        <ul class="inline download-row">
-                          <li><i class="icon-large icon-download-alt"></i></li>
-                          <li class="osgeo-download"></li>
-                          <li class="download-text">{{ _('OSGeo4W Network Installer') }}</li>
-                        </ul>
-                        </a>
-                        <p>
-			{{ _('In the installer choose ') }}<strong>{{ _('Express Install') }}</strong> {{ _('and select') }} <strong>{{ _('QGIS') }}</strong> {{ _('to install the <em>latest release</em> or ') }} <strong> {{ _('QGIS LTR') }} </strong> {{ _('to install the <em>long term release</em>.') }}<br/>
-			{{ _('The express installations have several optional packages including non-free software. To avoid those you have to use the') }} <strong>{{ _('Advanced Install') }}</strong> {{ _('and choose') }} <strong> qgis </strong> {{ _('and/or') }} <strong> qgis-ltr </strong> {{ _('in the desktop section.') }}<br/> <br/>
-<!--
-			<strong><font color="red"><em>{{ _('CAUTION') }}:</em></font></strong> {{ _('Upgrades of old setups from OSGeo4W v1 using this repository are not supported. You need to do a fresh install or use a different directory.') }}<br/>
-			<strong><font color="red"><em>{{ _('CAUTION') }}:</em></font></strong> {{ _('32 bit binaries are not produced anymore.  Also Windows 7 no longer works as we are now using Python 3.9, which dropped support for it.') }}<br/>
--->
+                    <div class="accordion-inner centered">
+                      <a class="reference btn btn-large btn-success" href="{{ lr_msi|e }}">
+                        <div class="primary-download-button">
+                          <div class="qgis-download"></div>
+                          <div class="download-text">{{ _('Download QGIS %s')|format( version ) }}</div>
+                        </div>
+                      </a>
+                      <a class="reference secondary-download-link" href="{{ ltr_msi|e }}">
+                        {{ _('Looking for the most stable version? Get QGIS %s %s')|format( ltrversion, ltrnote ) }}
+                      </a>
                       <br/>
-                      </div>
-                      <div>
-                        <h5>{{ _('Standalone installers (MSI) from OSGeo4W packages (recommended for new users)') }}</h5>
-                        <h6>{{ _('Latest release (richest on features):') }}</h6>
-                        <a href="https://qgis.org/downloads/QGIS-OSGeo4W-{{ release|e }}-{{ binary|e }}.msi" class="reference external">
-                          <ul class="inline download-row">
-                              <li><i class="icon-download-alt icon-large"></i></li>
-                              <li class="{{ "qgis{}-download".format( "2" if version.startswith("2.") else "" ) }}"></li>
-                              <li class="download-text">{{ _('QGIS Standalone Installer Version %s')|format( version ) }}</li>
-                          </ul>
-                        </a>
-                        <a href="https://qgis.org/downloads/QGIS-OSGeo4W-{{ release|e }}-{{ binary|e }}.sha256sum" class="reference external button">
-                          <ul class="inline download-row">
-                              <li></li>
-                              <li></li>
-                              <li class="download-text">sha256</li>
-                          </ul>
-                        </a>
-                        <h6>{{ _('Long term release (most stable):') }}</h6>
-                        <a href="https://qgis.org/downloads/QGIS-OSGeo4W-{{ ltrrelease|e }}-{{ ltrbinary|e }}.msi" class="reference external">
-                          <ul class="inline download-row">
-                              <li><i class="icon-download-alt icon-large"></i></li>
-                              <li class="{{ "qgis{}-download".format( "2" if ltrversion.startswith("2.") else "" ) }}"></li>
-                              <li class="download-text">{{ _('QGIS Standalone Installer Version %s')|format( ltrversion ) }}</li>
-                          </ul>
-                        </a>
-                        <a href="https://qgis.org/downloads/QGIS-OSGeo4W-{{ ltrrelease|e }}-{{ ltrbinary|e }}.sha256sum" class="reference external button">
-                          <ul class="inline download-row">
-                              <li></li>
-                              <li></li>
-                              <li class="download-text">sha256</li>
-                          </ul>
-                        </a>
-			<p>{{ _('Note that the MSI installers are much bigger than the previous installers.  This is because they include significant larger packages (eg. PROJ 8).  The main reason for the switch to MSI were the size limits previously used NSIS has, which was blocking updates of dependencies.') }}</p>
-                      </div>
+                      <a class="secondary-download-link" href="{{ pathto('site/forusers/alldownloads') }}#osgeo4w-installer">
+                        <div class="primary-download-button">
+                          <div class="osgeo-download"></div>
+			  &nbsp;&nbsp;{{ _('OSGeo4W Network Installer') }}
+                        </div>
+                      </a>
+			</li>
+                      <p>
+                         {{ _('The OSGeo4W installer is recommended for regular users or organization deployments. <em>It allows to have several QGIS versions in one place, and to keep each component up-to-date individually without having to download the whole package.</em>') }}
+		         <br>
+                         <br>
+			 <strong>
+			    {{ _('QGIS 3.36.2 and 3.34.6 in OSGeo4W and the standalone installers include many dependency updates compared to the previous versions (see ') }}
+                            <a style="margin:0%; display:inline; wth;" href="https://lists.osgeo.org/pipermail/qgis-user/2024-April/054334.html">posting</a>
+			    {{ _(').') }}
+                         </strong>
+			 <br>
+                         {{ _('The updates affect <strong>Windows 7 support</strong>, which currently <strong>does not work</strong>. It is unclear yet whether it can be restored.</p>') }}
+			 <br>
+			 <br>
+                         {{ _('Since QGIS 3.20 we only ship 64-bit Windows executables.') }}
+		      </p>
                     </div>
                   </div>
                 </div>
@@ -99,37 +79,21 @@
                     </a>
                   </div>
                   <div id="mac" class="accordion-body collapse in">
+                    <div class="accordion-inner centered">
+                      <p><b><em>{{ _('After installing QGIS, the first launch attempt may fail due to security protections. To enable QGIS, control-click on its icon in your Applications folder and select Open in the context menu. A confirmation dialog will display where you need to click the Open button again. This only has to be done once.') }}</em></b></p>
+                      <a class="reference btn btn-large btn-success" href="https://qgis.org/downloads/macos/qgis-macos-pr.dmg">
+                        <div class="primary-download-button">
+                          <div class="qgis-download"></div>
+                          <div class="download-text">{{ _('Download QGIS %s')|format( version ) }}</div>
+                        </div>
+                      </a>
+                      <a class="reference secondary-download-link" href="https://qgis.org/downloads/macos/qgis-macos-ltr.dmg">
+                        {{ _('Looking for the most stable version? Get QGIS %s %s')|format( ltrversion, ltrnote ) }}
+                      </a>
+                    </div>
                     <div class="accordion-inner">
-                      <h4>{{ _('Official All-in-one, signed installers') }}</h4>
-                      <p>{{ _('Mac Installer Packages for macOS High Sierra (10.13) and newer.') }}</p>
-                      <p>{{ _('QGIS is not yet notarized as required by macOS Catalina (10.15) security rules. On first launch, please right-click on the QGIS app icon, hold down the Option key, then choose Open.') }}</p>
-                      <h6>{{ _('Latest release (richest on features):') }}</h6>
-                      <a href="https://qgis.org/downloads/macos/qgis-macos-pr.dmg" class="reference external button">
-                        <ul class="inline download-row">
-                          <li><i class="icon-download-alt icon-large"></i></li>
-                          <li class="{{ "qgis{}-download".format( "2" if version.startswith("2.") else "" ) }}"></li>
-                          <li class="download-text">{{ _('QGIS macOS Installer Version %s')|format( version ) }}</li>
-                        </ul>
-                      </a>
-                      <h6>{{ _('Long term release (most stable):') }}</h6>
-                      <a href="https://qgis.org/downloads/macos/qgis-macos-ltr.dmg" class="reference external button">
-                        <ul class="inline download-row">
-                          <li><i class="icon-download-alt icon-large"></i></li>
-                          <li class="{{ "qgis{}-download".format( "2" if ltrversion.startswith("2.") else "" ) }}"></li>
-                          <li class="download-text">{{ _('QGIS macOS Installer Version %s')|format( ltrversion ) }}</li>
-                        </ul>
-                      </a>
-                      <h4>{{ _('Alternative build') }}</h4>
-
-                      <p>{{ _('Mac Installer Packages for macOS High Sierra (10.13) and newer.') }}</p>
-                      <p>{{ _('Installation instructions are in the Read Me on the disk image. GDAL and Python (both included on the disk image) are installed separately and outside the QGIS app so they are usable on their own. These packages use the python.org Python 3 - other distributions are not supported.') }}</p>
-                      <a href="https://www.kyngchaos.com/software/qgis/" class="reference external button">
-                        <ul class="inline download-row">
-                          <li><i class="icon-download-alt icon-large"></i></li>
-                          <li class="{{ "qgis-download" }}"></li>
-                          <li class="download-text">{{ _('macOS Installers') }}</li>
-                        </ul>
-                      </a>
+                        <p>{{ _('Alternatively, for native support of both Intel x86 and Apple ARM architectures, together with the latest versions of key components (e.g. GDAL, PDAL, GRASS GIS) see:') }}</p>
+                        <p class="download-text"><a href="alldownloads.html#macports">{{ _('MacPorts Installing Instructions') }}</a></p>
                     </div>
                   </div>
                 </div>
@@ -151,6 +115,7 @@
                       <li><a href="{{ pathto('site/forusers/alldownloads') }}#slackware">{{ _('Slackware') }}</a></li>
                       <li><a href="{{ pathto('site/forusers/alldownloads') }}#arch-linux">{{ _('Arch Linux') }}</a></li>
                       <li><a href="{{ pathto('site/forusers/alldownloads') }}#flatpak">{{ _('Flatpak') }}</a></li>
+                      <li><a href="{{ pathto('site/forusers/alldownloads') }}#spack">{{ _('Spack') }}</a></li>
                       </ul>
                       <p class="download-text"><a href="{{ pathto('site/forusers/alldownloads') }}#linux">{{ _('Linux Installation Instructions') }}</a></p>
                     </div>
@@ -180,13 +145,14 @@
                     <div class="accordion-inner">
                         <p>{{ _('The QGIS experience does not stop on the desktop. Various touch optimized apps allow you to take QGIS into the field') }}</p>
                         <h4>{{ _('Third-party touch optimized apps') }}</h4>
-                        <h5 class="app-name"><a href="https://qfield.org">{{ _('QField for QGIS (formerly QGIS for Android)') }}</a></h5>
+                        <h5 class="app-name"><a href="https://qfield.org">{{ _('QField (Android, iOS, Windows, macOS, Linux)') }}</a></h5>
                         <div class='app-download-buttons clearfix'>
                             <a class='app-download-button' href='https://play.google.com/store/apps/details?id=ch.opengis.qfield&utm_source=qgis.org'><img alt='Get it on Google Play' src="{{pathto('_static/images/app_download_play_store.png', 1)}}"/></a>
-                            <a class='app-download-button' href='https://download.opengis.ch/qfield/ci-builds/win/'><img alt='Get it for Windows' src="{{pathto('_static/images/app_download_windows.png', 1)}}"/></a>
+                            <a class='app-download-button' href='https://apps.apple.com/app/qfield-for-qgis/id1531726814'><img alt='Get it for iOS' src="{{pathto('_static/images/app_download_apple_store.png', 1)}}"/></a>
+                            <a class='app-download-button' href='https://qfield.org/get_latest/?platform=windows'><img alt='Get it for Windows' src="{{pathto('_static/images/app_download_windows.png', 1)}}"/></a>
                             <a class='app-download-button' href='https://www.github.com/opengisch/qfield/releases'><img alt='Get it on GitHub' src="{{pathto('_static/images/app_download_gh.png', 1)}}"/></a>
                         </div>
-                        <h5 class="app-name"><a href="https://merginmaps.com/">{{ _('Mergin Maps Input app (available for Android, iOS and Windows devices)') }}</a></h5>
+                        <h5 class="app-name"><a href="https://merginmaps.com/">{{ _('Mergin Maps mobile app (available for Android, iOS and Windows devices)') }}</a></h5>
                         <div class='app-download-buttons clearfix'>
                             <a class='app-download-button' href='https://play.google.com/store/apps/details?id=uk.co.lutraconsulting&utm_source=qgis.org'><img alt='Get it on Google Play' src="{{pathto('_static/images/app_download_play_store.png', 1)}}"/></a>
                             <a class='app-download-button' href='https://apps.apple.com/us/app/input/id1478603559'><img alt='Get it for iOS' src="{{pathto('_static/images/app_download_apple_store.png', 1)}}"/></a>
@@ -234,8 +200,6 @@
                  {{ _('and') }}
                  <a href="https://qgis.org/downloads/qgis-latest-ltr.tar.bz2">{{ _('here (long term release)') }}</a></p>
               <p>{{ _('Refer to the INSTALL guide on how to compile QGIS from source for the different platforms:') }} <a href="https://github.com/qgis/QGIS/blob/master/INSTALL.md"  class="reference external">{{ _('here') }}</a></p>
-              <p>{{ _('Note that you can also install the development version (nightly) via an installer from the normal downloads for your platform:') }} <a class="caption-link" href="{{ pathto('site/forusers/download') }}" target="_blank">{{ _('here')}}</a></p>
-              <p>{{ _('Plugins for QGIS are also available ') }}<a href="https://plugins.qgis.org/plugins/" class="reference external">{{ _('here') }}</a>.</p>
           </div>
         </div>
 

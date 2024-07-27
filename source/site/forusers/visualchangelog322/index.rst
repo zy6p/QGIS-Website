@@ -5,6 +5,8 @@ Changelog for QGIS 3.22
 
 |image1|
 
+Release date: 2021-10-22
+
 QGIS 3.22 Białowieża is aimed at celebrating the 100-year anniversary of `Białowieża National Park <https://en.wikipedia.org/wiki/Bia%C5%82owie%C5%BCa_National_Park>`__, Poland, which was established in 1921. `Białowieża Forest <https://en.wikipedia.org/wiki/Bia%C5%82owie%C5%BCa_Forest>`__ is one of the world’s last primary woodlands, located on the border between Poland and Belarus. It is one of the few natural old-growth forests in temperate lowland Europe and has been protected for over 600 years. The outstanding value of Białowieża Forest has been acknowledged by its recognition as a `UNESCO Natural World Heritage Site <https://whc.unesco.org/en/list/33>`__.
 
 Białowieża Forest is named after the village Białowieża, which is located right in the middle of this woodland. It is one of the oldest settlements in the area, nowadays hosting numerous research and tourism activities. Today, there are three research institutions in the village: `Białowieża Geobotanical Station, University of Warsaw <https://bsg.bialowieza.pl/en/>`__, `The Mammal Research Institute, Polish Academy of Sciences <https://ibs.bialowieza.pl/en/>`__, and the `Forest Research Institute, Department of Natural Forests <https://www.ibles.pl/en/web/guest/home>`__. Additionally, a large number of scientists from Poland and abroad travel to Białowieża in order to carry out their studies, and as such, there are also other users of QGIS in the area, as well as additional projects which contribute to the Open Data and Open Source Software ecosystems, such as the `Open Forest Data <https://openforestdata.pl/>`__ project.
@@ -871,7 +873,9 @@ There is database-level configuration option, ``READ_COMMITTED_SNAPSHOT``, which
 
 Activating this will change the behavior to function in a similar fashion as other RDBMS systems such as PostgreSQL, in that transactions do not cause blocking and enables the database to support multiple versions of data. This is a database-level property configured by the administrator and can not be automatically set by QGIS when connecting to the database, however it may be activated using the following query:
 
-``sql ALTER DATABASE my_db SET READ_COMMITTED_SNAPSHOT ON``
+.. code-block:: sql
+
+  ALTER DATABASE my_db SET READ_COMMITTED_SNAPSHOT ON
 
 In most instances where transactions are desired, activating this option is likely recommended to prevent freezing in QGIS or other clients.
 
@@ -962,7 +966,9 @@ setFilterRect), or the new DistanceWithin filter.
 
 For example, the following request will retrieve all features within 50 map units of the provided linestring:
 
-``QgsFeatureRequest().setDistanceWithin(QgsGeometry.fromWkt('LineString(0 0, 10 0, 12 1)'), 50)``
+.. code-block:: python
+
+  QgsFeatureRequest().setDistanceWithin(QgsGeometry.fromWkt('LineString(0 0, 10 0, 12 1)'), 50)
 
 Distance within filters are treated like bounding box filters, in that they are independent of any attribute/id filters (such as feature ids or expressions).
 
@@ -983,7 +989,12 @@ This is now supported by setting the "value\_hints" option in the widget wrapper
 
 Whilst this provides a mechanism for guiding users to select from valid string values when running a Processing algorithm through the GUI, it does not place any limits on the string values accepted via PyQGIS codes or when running the algorithm via other means that do not use the GUI. Algorithms should gracefully handle other values accordingly.
 
-``param = QgsProcessingParameterString( 'PRINTER_NAME', 'Printer name')     # show only printers which are available on the current system as options     # for the string input.     param.setMetadata( {'widget_wrapper':       { 'value_hints': ['Inkjet printer', 'Laser printer'] }     })``
+.. code-block:: python
+
+  param = QgsProcessingParameterString( 'PRINTER_NAME', 'Printer name')
+  # show only printers which are available on the current system as options
+  # for the string input.
+  param.setMetadata( {'widget_wrapper': { 'value_hints': ['Inkjet printer', 'Laser printer'] } })
 
 This feature was developed by `Nyall Dawson <https://github.com/nyalldawson>`__
 

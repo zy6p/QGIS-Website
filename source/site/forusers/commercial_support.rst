@@ -73,6 +73,13 @@ and other FOSS applications.
 
 ----
 
+.. |geoideal| image:: /static/site/about/images/geoideal.png
+   :width: 150 px
+
+|geoideal| `Geoideal S.A.S. <https://geoideal.co/>`_ (based in Colombia) was created by GeoTux founders to provide commercial support, development and training for QGIS (Desktop, Server as well as its related projects for Mobile and Web applications) and PostgreSQL/PostGIS. We have contributed code to QGIS core (as well as a large number of Python plugins) since 2009.
+
+----
+
 .. |itopen| image:: /static/site/about/images/itopen.png
    :width: 200 px
 
@@ -149,7 +156,7 @@ and more.
 .. |oslandia| image:: /static/site/about/images/oslandia.png
    :height: 100 px
 
-|oslandia| `Oslandia <http://www.oslandia.com/?page_id=20>`_ (based in France)
+|oslandia| `Oslandia <https://oslandia.com/>`_ (based in France)
 provides services on open source GIS. Oslandia offers training, support,
 development and consulting, namely on QGIS and PostGIS.
 
@@ -236,8 +243,6 @@ OpenLayers
 |LandGoed| `LandGoed <http://landgoed.it/>`_ (based in the Netherlands) provides commercial support, hosting services and training for all opensource-GIS, including QGIS. With over ten years experience in training and developing, LandGoed is the go-to supplier for opensource-GIS in the Netherlands.
 
 ----
-
-
 
 .. |nextgis| image:: /static/site/about/images/nextgis.gif
    :width: 200 px
@@ -326,6 +331,13 @@ Our bespoke GIS training courses in QGIS and other GIS software offer the opport
 
 ----
 
+.. |envirosolutions| image:: /static/site/about/images/envirosolutions.png
+   :width: 85 px
+
+|envirosolutions| `EnviroSolutions Sp. z o.o. <https://www.envirosolutions.pl/>`_ (based in Warsaw, Poland) provide solutions based on OpenSource GIS. We serve comprehensive assistance and courses at different tiers. Our services encompass tailored workshops and personalized guidance. We can migrate and integrate your current GIS solutions to FOSS4G and create custom QGIS plug-ins tailored for you.
+
+----
+
 .. |fossacademy| image:: /static/site/about/images/fossacademy.png
    :width: 100 px
 
@@ -399,6 +411,22 @@ in Austin, TX, USA) provides support and training for QGIS and PostGIS.
 
 |karttakeskus| `Karttakeskus <http://www.karttakeskus.fi/>`_ (based in Finland)
 provides commercial support and training for QGIS and open spatial data.
+
+----
+
+.. |level2| image:: /static/site/about/images/level2.png
+   :width: 75 px
+
+|level2| `level2 <https://level2.si/?lang=en>`_ (based in Slovenia)
+provides support, training and custom development for QGIS and PostGIS, 
+with a special focus on Web-GIS and mobile applications.
+
+----
+
+.. |MammothGeospatial| image:: /static/site/about/images/mammoth_geospatial.png
+   :width: 100 px
+
+|MammothGeospatial| `Mammoth Geospatial <https://mammothgeospatial.com/>`_ (based in Australia) are open geospatial experts, providing consulting, support and training in QGIS and PostGIS.
 
 ----
 

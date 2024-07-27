@@ -42,6 +42,10 @@ Online course material for QGIS training developed and maintained by `Spatial Th
 * `Advanced QGIS  <https://courses.spatialthoughts.com/advanced-qgis.html>`_
 * `Customizing QGIS with Python <https://courses.spatialthoughts.com/pyqgis-in-a-day.html>`_
 
+Workbook developed by the `"GIS and RS" Laboratory at the Junior Academy of Sciences of Ukraine <https://man.gov.ua/online-projects/akademiya-copernicus-laboratoriya-gis-ta-dzz>`_:
+
+* `Fundamentals of Remote Sensing Practice Book <https://api.man.gov.ua/api/assets/man/a42bb07a-5cb3-44aa-bc25-e660d64997bc/>`_ 
+
 Brazilian Portuguese
 ....................
 
@@ -53,7 +57,7 @@ French
 ......
 
 The French Ministry of Environment supports the QGIS project. Training material from them is available here:
-http://www.geoinformations.developpement-durable.gouv.fr/qgis-supports-pedagogiques-r947.html
+http://www.geoinformations.developpement-durable.gouv.fr/qgis-formations-et-supports-pedagogiques-r947.html
 
 Other resources from them are available here:
 http://www.geoinformations.developpement-durable.gouv.fr/qgis-r625.html
@@ -75,3 +79,16 @@ http://training.gismentors.eu/qgis-zacatecnik/
 
 QGIS for advanced users:
 http://training.gismentors.eu/qgis-pokrocily/
+
+Ukrainian 
+.........
+
+РОБОЧИЙ ЗОШИТ «АНАЛІЗ КОСМІЧНИХ ЗНІМКІВ У ГЕОІНФОРМАЦІЙНИХ СИСТЕМАХ» Частина 2:
+https://api.man.gov.ua/api/assets/man/a0746113-31c9-44d7-b6a1-d819e2e535dd/
+
+Spanish
+.......
+
+Introduccion a los Sistemas de Informacion Geografica con Qgis: 
+https://github.com/federicogazaba/introduccion-a-los-sig-con-qgis
+
